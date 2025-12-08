@@ -2,9 +2,8 @@
 import logging
 import datetime
 import pytz
-import config  # Ini sekarang aman karena membaca dari .env
+import config
 
-# --- PERBAIKAN IMPORT DI SINI ---
 from telegram import Update 
 from telegram.ext import (
     Application,
@@ -13,10 +12,10 @@ from telegram.ext import (
     ConversationHandler,
     MessageHandler,
     filters,
-    ContextTypes, # Ini sebelumnya kurang
+    ContextTypes,
 )
 
-# Impor handlers (Pastikan folder handlers Anda strukturnya benar)
+# Impor handlers
 from handlers import menu, jadwal, tugas, pengingat
 
 # Impor states
@@ -50,11 +49,6 @@ async def cancel(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
 def main() -> None:
     """Jalankan bot."""
     
-    # === PERBAIKAN JOB QUEUE ===
-    # Di versi baru python-telegram-bot, biarkan ApplicationBuilder 
-    # membuat JobQueue sendiri agar lebih stabil, kecuali Anda butuh custom.
-    # Kita cukup panggil .build()
-    
     application = (
         Application.builder()
         .token(config.TOKEN)
@@ -64,16 +58,16 @@ def main() -> None:
     # Ambil job_queue bawaan dari application
     job_queue = application.job_queue
 
-    # === Atur Job Queue untuk Pengingat Harian ===
+    # Atur Job Queue untuk Pengingat Harian
     WIB = pytz.timezone('Asia/Jakarta')
     
     # Pastikan jam server sesuai
-    reminder_time = datetime.time(hour=21, minute=0, second=0, tzinfo=WIB)
+    reminder_time = datetime.time(hour=30, minute=0, second=0, tzinfo=WIB)
     
     job_queue.run_daily(check_reminders, time=reminder_time, name="daily_reminder")
     logger.info(f"Job 'daily_reminder' diatur untuk berjalan setiap hari jam 21:00 WIB.")
 
-    # === Definisikan Conversation Handlers ===
+    # Definisikan Conversation Handlers
     
     # Conversation Handler untuk Tambah Jadwal
     conv_handler_jadwal = ConversationHandler(
@@ -96,7 +90,7 @@ def main() -> None:
         fallbacks=[CommandHandler("batal", cancel)],
     )
 
-    # === Daftarkan Semua Handlers ===
+    # = Semua Handlers =
     
     # Perintah
     application.add_handler(CommandHandler("start", menu.start))
