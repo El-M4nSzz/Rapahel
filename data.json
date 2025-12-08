@@ -1,0 +1,97 @@
+{
+  "1262656225": {
+    "jadwal": [
+      {
+        "hari": "Senin",
+        "mata_kuliah": "Teknik Multimedia",
+        "jam": "07.00"
+      },
+      {
+        "hari": "Senin",
+        "mata_kuliah": "Rekayasa Perangkat Lunak",
+        "jam": "08:35"
+      },
+      {
+        "hari": "Senin",
+        "mata_kuliah": "Manajemen, kurikulum dan ketenagakerjaan pendidikan kejuruan",
+        "jam": "14:45"
+      },
+      {
+        "hari": "Selasa",
+        "mata_kuliah": "Belajar Pembelajaran",
+        "jam": "13:10"
+      },
+      {
+        "hari": "Rabu",
+        "mata_kuliah": "Pemrograman Web",
+        "jam": "07:00"
+      }
+    ],
+    "tugas": [
+      {
+        "nama": "Tugas Akhir RPL",
+        "deadline": "2025-11-28"
+      },
+      {
+        "nama": "Tugas Akhir PemWeb",
+        "deadline": "2025-11-25"
+      },
+      {
+        "nama": "Artikel Tugas Akhir RPL",
+        "deadline": "2025-11-28"
+      },
+      {
+        "nama": "Submit HKI PemWeb",
+        "deadline": "2025-11-27"
+      },
+      {
+        "nama": "ManualBook RPL",
+        "deadline": "2025-11-23"
+      }
+    ]
+  },
+  "7563505791": {
+    "jadwal": [
+      {
+        "hari": "Senin",
+        "mata_kuliah": "Rekayasa perangkat lunak",
+        "jam": "08:00"
+      }
+    ],
+    "tugas": [
+      {
+        "nama": "Makalah RPL",
+        "deadline": "2025-11-04"
+      }
+    ]
+  },
+  "7520465241": {
+    "jadwal": [],
+    "tugas": []
+  },
+  "1283890887": {
+    "jadwal": [
+      {
+        "hari": "Senin",
+        "mata_kuliah": "Tidak ada",
+        "jam": "Free"
+      },
+      {
+        "hari": "Selasa",
+        "mata_kuliah": "Manov jam 09.30-12.00",
+        "jam": "Pkn 13.10-14.00"
+      }
+    ],
+    "tugas": []
+  },
+  "6835895366": {
+    "jadwal": [
+      {
+        "hari": "Senin",
+        "mata_kuliah": "JKT",
+        "jam": "10.35"
+      }
+    ],
+    "tugas": []
+  }
+}
