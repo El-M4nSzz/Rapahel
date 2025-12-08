@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Ambil token dari environment variable
-TOKEN = os.getenv("TOKEN_TELEGRAM")
+TOKEN = os.getenv("TELEGRAM_TOKEN")
 
 if not TOKEN:
     raise ValueError("Token tidak ditemukan! Pastikan file .env ada atau Environment Variable di set.")
