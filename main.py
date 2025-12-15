@@ -62,7 +62,7 @@ def main() -> None:
     WIB = pytz.timezone('Asia/Jakarta')
     
     # Pastikan jam server sesuai
-    reminder_time = datetime.time(hour=21, minute=5, second=0, tzinfo=WIB)
+    reminder_time = datetime.time(hour=21, minute=10, second=0, tzinfo=WIB)
     
     job_queue.run_daily(check_reminders, time=reminder_time, name="daily_reminder")
     logger.info(f"Job 'daily_reminder' diatur untuk berjalan setiap hari jam 21:00 WIB.")
